@@ -3,6 +3,9 @@ import autoprefixer from 'autoprefixer'
 import path from 'path';
 
 export default defineConfig({
+	base: process.env.PUBLIC_PATH
+		? process.env.PUBLIC_PATH
+		: '/',
 	build: {
 		minify: true,
 		cssMinify: true,
